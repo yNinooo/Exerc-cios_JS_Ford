@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <script>
+        var consumidor = 7, compra = null;
+        
+        while (!(consumidor >= 1) || !(consumidor <= 3) || (consumidor == NaN)) {
+            consumidor = parseInt(prompt("Você é:\n1 - Cliente\n2 - Cliente VIP\n3 - Funcionário"));
+        }
+
+        // while ((compra <= 0) || (consumidor == NaN)) {
+            compra = parseInt(prompt("Digite o valor da sua compra:"));
+        //     alert(`${compra}`)
+        // }
+
+        compra = compra.toFixed(2);
+
+        switch (consumidor) {
+            case 1:
+                alert(`Você não possui descontos\nTotal a pagar R$${compra}`);
+                break;
+
+            case 2:
+                compra = compra * 0.95;
+                alert(`Você possui 5% de desconto\nTotal a pagar R$${compra}`);
+            break;
+
+            case 3:
+                compra = compra * 0.90;
+                alert(`Você possui 10% de desconto\nTotal a pagar R$${compra}`);
+                break;
+        
+            default:
+                break;
+        }
+
+    </script>
+</body>
+</html>

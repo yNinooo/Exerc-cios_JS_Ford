@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <script>
+        var medida1, medida2, medida3;
+
+        alert("Insira a seguir os valores dos três lados de um triângulo para saber se ele é equilátero, escaleno ou isósceles")
+        medida1 = parseInt(prompt("Informe o valor do lado esquerdo do triângulo:"));
+        medida2 = parseInt(prompt("Informe o valor do lado direito do triângulo:"));
+        medida3 = parseInt(prompt("Informe o valor do lado inferior do triângulo:"));    
+
+        if ((medida1 == medida2) && (medida1 == medida3) && (medida2 == medida3)) {
+            alert("Esse triângulo é um Equilatero");
+        } else if ((medida1 == medida2) || (medida1 == medida3) || (medida2 == medida3)) {
+            alert("Esse triângulo é um Isósceles");
+        } else {
+            alert("Esse triângulo é um Escaleno");
+        }
+    </script>
+</body>
+</html>

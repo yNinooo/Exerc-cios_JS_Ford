@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <script>
+        var combustivel = "x", gas = 5.30, alc = 4.90, quantia;
+        
+            combustivel = prompt("Selecione um combustível:\nG - Gasolina - R$5.30\nA - Alcool - R$4.90");
+
+            quantia = parseInt(prompt(`Quantos litros?`));
+
+
+        switch (combustivel) {
+            case 1:
+                alert(`Você não possui descontos\nTotal a pagar R$${compra}`);
+                break;
+
+            case 2:
+                compra = compra * 0.95;
+                alert(`Você possui 5% de desconto\nTotal a pagar R$${compra}`);
+            break;
+
+            case 3:
+                compra = compra * 0.90;
+                alert(`Você possui 10% de desconto\nTotal a pagar R$${compra}`);
+                break;
+        
+            default:
+                break;
+        }
+
+    </script>
+</body>
+</html>

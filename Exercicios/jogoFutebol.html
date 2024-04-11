@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <script>
+        var time1, time2, nomet1, nomet2;
+
+        nomet1 = prompt("Qual é o time 1?");
+        nomet2 = prompt("Qual é o time 2?");
+
+        time1 = parseInt(prompt(`Quantos gols o ${nomet1} fez?`));
+        time2 = parseInt(prompt(`Quantos gols o ${nomet2} fez?`));
+
+        if (time1 == time2) {
+            alert(`O jogo terminou empatado\nResultado do jogo: ${time1} x ${time2}`)
+        } else if (time1 > time2) {
+            alert(`O ${nomet1} ganhou\nResultado do jogo: ${time1} x ${time2}`)
+        } else if (time1 < time2) {
+            alert(`O ${nomet2} ganhou\nResultado do jogo: ${time2} x ${time1}`)
+        }
+    </script>
+</body>
+</html>
