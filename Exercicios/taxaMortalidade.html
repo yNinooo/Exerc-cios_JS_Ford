@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <script>
+        var natalidade, mortalidade, nascidos, mortos, habitantes, select = 7;
+
+        natalidade = (nascidos * 1000) / habitantes;
+        mortalidade = (mortos * 1000) / habitantes;
+        
+
+        while (!(select >= 1) || !(select <= 2) || (select == NaN)) {
+            select = parseInt(prompt("What do you wanna calculate?:\n1 - Natalidade\n2 - Mortalidade"));
+        }
+
+        nascidas = parseInt(prompt("How many children has borned ?"));
+        mortos = parseInt(prompt("How many people died?"));
+        habitantes = parseInt(prompt("How many inhabitant is there?"));
+
+        natalidade = (nascidos * 1000) / habitantes;
+        mortalidade = (mortos * 1000) / habitantes;
+
+        switch (select) {
+            case 1:
+                alert(`Você não possui descontos\nTotal a pagar R$${compra}`);
+                break;
+
+            case 2:
+                compra = compra * 0.95;
+                alert(`Você possui 5% de desconto\nTotal a pagar R$${compra}`);
+            break;
+        
+            default:
+                break;
+        }
+
+
+
+
+            produto = prompt("Type the product name:");
+            quantia = parseInt(prompt(`How many did you buy?`));
+            preço = parseInt(prompt(`How much it cost?`));
+
+            total = quantia * preço;
+            
+            if(quantia <= 5) {
+                desconto = 0.98;
+                total = total * desconto;
+                total = total.toFixed(2);
+                alert(`Produto: ${produto}\nQuantia: ${quantia}\nPreço: ${preço}\nTotal: R$${total}\nDesconto: ${desconto * 100}%`);
+            } else if(quantia > 5 && quantia <= 10) {
+                desconto = 0.97;
+                total = total * desconto;
+                total = total.toFixed(2);
+                alert(`Produto: ${produto}\nQuantia: ${quantia}\nPreço: ${preço}\nTotal: R$${total}\nDesconto: ${desconto * 100}%`);              
+            } else {
+                desconto = 0.95;
+                total = total * desconto;
+                total = total.toFixed(2);
+                alert(`Produto: ${produto}\nQuantia: ${quantia}\nPreço: ${preço}\nTotal: R$${total}\nDesconto: ${desconto * 100}%`);              
+            }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <script>
+        var produto, preço, quantia, desconto, total;
+        
+            produto = prompt("Type the product name:");
+            quantia = parseInt(prompt(`How many did you buy?`));
+            preço = parseInt(prompt(`How much it cost?`));
+
+            total = quantia * preço;
+            
+            if(quantia <= 5) {
+                desconto = 0.98;
+                total = total * desconto;
+                total = total.toFixed(2);
+                alert(`Produto: ${produto}\nQuantia: ${quantia}\nPreço: ${preço}\nTotal: R$${total}\nDesconto: ${desconto * 100}%`);
+            } else if(quantia > 5 && quantia <= 10) {
+                desconto = 0.97;
+                total = total * desconto;
+                total = total.toFixed(2);
+                alert(`Produto: ${produto}\nQuantia: ${quantia}\nPreço: ${preço}\nTotal: R$${total}\nDesconto: ${desconto * 100}%`);              
+            } else {
+                desconto = 0.95;
+                total = total * desconto;
+                total = total.toFixed(2);
+                alert(`Produto: ${produto}\nQuantia: ${quantia}\nPreço: ${preço}\nTotal: R$${total}\nDesconto: ${desconto * 100}%`);              
+            }
+
+    </script>
+</body>
+</html>

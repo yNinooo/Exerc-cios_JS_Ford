@@ -2,31 +2,32 @@
 <html lang="pt-BR">
 <body>
     <script>
-        var combustivel = "x", gas = 5.30, alc = 4.90, quantia;
+        var combustivel = "x", gas = 5.30, alc = 4.90, quantia, desconto;
         
             combustivel = prompt("Selecione um combustível:\nG - Gasolina - R$5.30\nA - Alcool - R$4.90");
-
             quantia = parseInt(prompt(`Quantos litros?`));
 
-
-        switch (combustivel) {
-            case 1:
-                alert(`Você não possui descontos\nTotal a pagar R$${compra}`);
-                break;
-
-            case 2:
-                compra = compra * 0.95;
-                alert(`Você possui 5% de desconto\nTotal a pagar R$${compra}`);
-            break;
-
-            case 3:
-                compra = compra * 0.90;
-                alert(`Você possui 10% de desconto\nTotal a pagar R$${compra}`);
-                break;
-        
-            default:
-                break;
-        }
+            if(quantia <= 20) {
+                if(combustivel.toLowerCase() == "g") {
+                    desconto = 0.96;
+                    quantia = quantia * gas * desconto;
+                } else if(combustivel.toLowerCase() == "a") {
+                    desconto = 0.97;
+                    quantia = quantia * alc * desconto;
+                }
+                quantia = quantia.toFixed(2);
+                alert(`Total: R$${quantia}\nDesconto: ${desconto * 100}%`);
+            } else {
+                if(combustivel.toLowerCase() == "g") {
+                    desconto = 0.94;
+                    quantia = quantia * gas * desconto;
+                } else if(combustivel.toLowerCase() == "a") {
+                    desconto = 0.95;
+                    quantia = quantia * alc * desconto;
+                }
+                quantia = quantia.toFixed(2);
+                alert(`Total: R$${quantia}\nDesconto: ${desconto * 100}%`);
+            }
 
     </script>
 </body>
